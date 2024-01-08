@@ -72,7 +72,7 @@ function GameScreen({ userNumber, onGameOver }) {
       </Card>
       <View style={styles.listView}>
        <FlatList data={guessRounds}
-        renderItem={(itemData) => <Text>{itemData.item}</Text>}
+        renderItem={(itemData) => <Text style={styles.guessedText}>Opponent's Guess: {itemData.item}</Text>}
         keyExtractor={(item) => item}>
        </FlatList>
       </View>
@@ -97,6 +97,15 @@ const styles = StyleSheet.create({
   listView: {
     flex: 1,
     padding: 12
+  },
+  guessedText: {
+    borderWidth: 1,
+    borderRadius: 40,
+    borderColor: color_codes.dark_red,
+    padding: 10,
+    backgroundColor: color_codes.dark_red,
+    color: color_codes.white,
+    marginTop: 5
   }
 });
 

@@ -1,7 +1,8 @@
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, StyleSheet, Dimensions } from "react-native"
 import { color_codes } from "../utils/color_codes";
 
 function NumberContainer({children}) {
+    const deviceWidth = Dimensions.get('window').width;
     return(
         <View style={styles.container}>
             <Text style={styles.numberText}>{children}</Text>

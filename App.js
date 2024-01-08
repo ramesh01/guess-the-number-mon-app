@@ -22,6 +22,7 @@ export default function App() {
   const userInputConfirmHandler = (input) => {
     setUserInput(input);
     setGuessRounds(0);
+    setGameOver(false);
   }
 
   let screen = <StartGameScreen onConfirm={userInputConfirmHandler} />;
